@@ -4,8 +4,8 @@ title: "Natas Level0 - Level1"
 date: 2015-09-23 21:16:25
 image: '/assets/img/'
 description:
-tags:
-categories:
+tags: Natas CTF
+categories: Natas
 twitter_text:
 ---
 Login into <http://natas0.natas.labs.overthewire.org/> with the username and pass found on the home page:
