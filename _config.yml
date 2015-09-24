@@ -1,6 +1,6 @@
 # Site settings
 description: A blog about security stuff I find intresting
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://dejandayoff.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
