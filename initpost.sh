@@ -46,7 +46,7 @@ POSTPATH="${BINPATH}/_posts"
 DIST_FOLDER="$POSTPATH"
 
 # Set your blog URL
-BLOG_URL="your_site"
+BLOG_URL="dejandayoff.com"
 
 # Set your assets URL
 ASSETS_URL="assets/img/"
