@@ -1,15 +1,16 @@
 # Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "/will-jekyll-template" # the subpath of your site, e.g. /blog
-url: "http://willianjusten.com.br" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+description: A blog about security stuff I find intresting
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://dejandayoff.com" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
+username: Dejan Zelic
+user_description: Penetration Tester
+user_title: Penetration Tester
+email: dejanzelic@gmail.com
+#@TODO finish social media stuff
 twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
+github_username:  dejanzelic
 gplus_username:  lorem_ipsum
 disqus_username: lorem_ipsum
 
