@@ -10,7 +10,7 @@ twitter_text:
 ---
 Natas 16 looks similar to the earlier challenges where we were got to search for a word in a flat document. However this time it says "For security reasons, we now filter even more on certain characters":
 
-    ![Natas 16 search](/assets/img/screenshots/Natas_level16-1.png)
+![Natas 16 search](/assets/img/screenshots/Natas_level16-1.png)
 
 Lets open up the source and see what the difference is:
     <html>
@@ -69,7 +69,7 @@ So any of our previous strings will not work. I remembered that you can execute 
 
 If we run that and the first character is "A" the entire password will be returned. If "A" does not exist, an empty string will be returned. However, this won't work because even if we guess the correct letter grep will return the password and search for the password in the dictionary which does not exist. If we find a word that exists in the dictionary, we would be able to utilize the fact that grep returns an empty string when the letter is not found. Lets first find a word we can use, I just searched for the letter "a":
 
-    ![Natas 16 search for a](/assets/img/screenshots/Natas_level16-2.png)
+![Natas 16 search for a](/assets/img/screenshots/Natas_level16-2.png)
 
 I'll use the word "African" and that would mean our query string will look something like:
 
@@ -77,7 +77,7 @@ I'll use the word "African" and that would mean our query string will look somet
 
 Next I'll use the Burp Intruder to see if we can get just the first letter:
 
-    ![Natas 16 search](/assets/img/screenshots/Natas_level16-3.png)
+![Natas 16 search](/assets/img/screenshots/Natas_level16-3.png)
 
 Looks like we got a hit! Now lets use a script. I'll copy most of it from the last challenge:
 

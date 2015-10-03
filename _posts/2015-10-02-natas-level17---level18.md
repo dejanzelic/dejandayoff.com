@@ -10,7 +10,7 @@ twitter_text:
 ---
 Natas 17 takes us back to Natas 15:
 
-    ![Natas 17 search](/assets/img/screenshots/Natas_level17-1.png)
+![Natas 17 search](/assets/img/screenshots/Natas_level17-1.png)
 
 Lets look at the source to see if we can find whats changed:
 
@@ -72,7 +72,7 @@ Lets look at the source to see if we can find whats changed:
 
 Hmm... looks like they completely removed the response. I submitted the user name "natas18" (since I assume it will exist) and "asfdgshnt" since I do not think it will exist. I captured both requests and sent it to the Burp Comparer to see if we can find any diffrences:
 
-    ![Natas 17 burp comparer](/assets/img/screenshots/Natas_level17-2.png)
+![Natas 17 burp comparer](/assets/img/screenshots/Natas_level17-2.png)
 
 As expected, the result is exactly the same. Since this is a blind sql injection with absolutly no output, the only thing I can think of is a time base attack. If a reponse takes longer when the password exists, we should be able to brute force it. With no output, this might be difficult. So I rebuild a database on my local machine with the following data:
     +----------+----------------------------------+
@@ -88,7 +88,7 @@ Next I try the following query:
 
 And I get the following output:
 
-    ![Natas 17 db output](/assets/img/screenshots/Natas_level17-3.png)
+![Natas 17 db output](/assets/img/screenshots/Natas_level17-3.png)
 
 Here is the string that I will need to submit:
 
@@ -96,11 +96,11 @@ Here is the string that I will need to submit:
 
 I capture a request in Burp and send it to the intruder but since this is a time base attack, I need to change the Number of threads to 1:
 
-    ![Natas 17 Burp threads](/assets/img/screenshots/Natas_level17-4.png)
+![Natas 17 Burp threads](/assets/img/screenshots/Natas_level17-4.png)
 
 After running it I look at the response time and find the first letter of the password is x:
 
-    ![Natas 17 Burp result](/assets/img/screenshots/Natas_level17-1.png)
+![Natas 17 Burp result](/assets/img/screenshots/Natas_level17-1.png)
 
 Now lets script it!
 

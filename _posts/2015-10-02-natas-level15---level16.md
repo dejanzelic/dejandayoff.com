@@ -10,11 +10,11 @@ twitter_text:
 ---
  Natas 15 looks like it is going to be fun! When I first get to the page, I am greeted by a simple User name search:
 
-    ![Natas 15 search](/assets/img/screenshots/Natas_level15-1.png)
+![Natas 15 search](/assets/img/screenshots/Natas_level15-1.png)
 
 The page will then respond with:
 
-    ![Natas 15 response](/assets/img/screenshots/Natas_level15-2.png)
+![Natas 15 response](/assets/img/screenshots/Natas_level15-2.png)
 
 Lets take a look at the source:
 
@@ -106,11 +106,11 @@ No surprises here, I got a "User does not exist" error. Next I captured this req
 
 I clicked run and got the first letter of the password:
 
-    ![Natas 15 Burp Intruder](/assets/img/screenshots/Natas_level15-3.png)
+![Natas 15 Burp Intruder](/assets/img/screenshots/Natas_level15-3.png)
 
 Wait, what the hell?
 
-    ![Natas 15 Duplicate letter](/assets/img/screenshots/Natas_level15-4.png)
+![Natas 15 Duplicate letter](/assets/img/screenshots/Natas_level15-4.png)
 
 It looks like the first letter is "w" but the database is not case sensitive so the Burp Intruder found both "w" and "W" send back the same response. To fix this, we just need to change the statment a bit:
 
