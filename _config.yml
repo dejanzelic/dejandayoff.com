@@ -8,11 +8,9 @@ username: Dejan Zelic
 user_description: Penetration Tester
 user_title: Penetration Tester
 email: dejanzelic@gmail.com
-#@TODO finish social media stuff
-twitter_username: lorem_ipsum
+twitter_username: dejandayoff
 github_username:  dejanzelic
-gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+disqus_username: dejanzelic
 
 # Build settings
 markdown: kramdown
