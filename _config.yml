@@ -12,6 +12,7 @@ twitter_username: dejandayoff
 github_username:  dejanzelic
 gplus_username:  DejanZelicDayoff
 disqus_username: dejanzelic
+disqus_sitename: dejandayoff
 
 # Build settings
 markdown: kramdown
