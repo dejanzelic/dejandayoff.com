@@ -61,9 +61,9 @@ if($key != "") {
 
 Here is the regular expression that filters out the words:
 
-{% highlight regex %}
-/[;|&`\'"]/
-{% endhighlight %}
+
+    /[;|&`\'"]/
+
 
 Basically any of the following characters are now disallowed: ; | & ' \ ' "
 
@@ -80,7 +80,7 @@ If we run that and the first character is "A" the entire password will be return
 I'll use the word "African" and that would mean our query string will look something like:
 
 {% highlight bash %}
-    $(grep ^A /etc/natas_webpass/natas17)African
+$(grep ^A /etc/natas_webpass/natas17)African
 {% endhighlight %}
 
 Next I'll use the Burp Intruder to see if we can get just the first letter:
