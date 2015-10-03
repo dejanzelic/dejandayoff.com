@@ -129,6 +129,7 @@ for i in range(1, 33):
 {% endhighlight %}
 
 After that's done we get the following output:
+
     1 out of 32
     8
     2 out of 32
