@@ -182,3 +182,6 @@ and finally, looking through the sql file, it is possible to get the database fl
 {% highlight sql %}
 INSERT INTO `flags` VALUES (1,'admin','897df6fa0250adb72a8acb64dcfa0293','Flag in /admin.php'),(2,'hidden','5b08478093ff4ef1672238ecc53908f0','APPLY @ EARLY WARNING');
 {% endhighlight %}
+
+If you find challenges like this fun, come and apply at Early Warning:
+[securityjobs.earlywarning.com](securityjobs.earlywarning.com)
