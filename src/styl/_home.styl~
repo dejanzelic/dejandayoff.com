@@ -37,7 +37,6 @@
                 text-align center
         .description
             color texts
-            word-wrap break-word
             mainFont(300)
             font-size rem(20px)
             a
