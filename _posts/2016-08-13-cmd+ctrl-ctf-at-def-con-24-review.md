@@ -13,9 +13,13 @@ This year our CTF team (Savage Submarine) took first place in CMD+CTRL at DEF CO
 Savage Submarine consisted of:
 
 [@amoldp18](https://twitter.com/amoldp18)
+
 [@crowdshield](https://twitter.com/crowdshield) [site](https://crowdshield.com/)
+
 [@dejandayoff](https://twitter.com/dejandayoff)
+
 [@hackerbyhobby](https://twitter.com/hackerbyhobby)
+
 [@tibaal89](https://twitter.com/tibaal89) [site](https://tibaal.github.io/)
 
 We started off by walking around the DEF CON contest area trying to find the SecureNinja CTF. However, we ran into the CMD+CTRL booth and they convinced us to sign up. All of the tables were full in the contest area so we decided to go to the Café Arcade and sit down.
