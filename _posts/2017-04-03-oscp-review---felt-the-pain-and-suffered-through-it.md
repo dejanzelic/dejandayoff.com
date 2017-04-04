@@ -42,7 +42,7 @@ When you start the PWK course you are sent a 320 page PDF book that contains les
 
 My overall opinion of the book is that it was a great starting point to learn about many of the topics necessary to pass the OSCP. However, the book alone is not enough to pass the OSCP. The student needs to do their own research when they do not understand something. The lessons at the end of each section are, in my opinion, required for the course. They do a great job summarizing the sections. 
 
-I cannot stress enough that the book is not enough to pass the OSCP. The windows buffer overflow is discussed in 20 pages, If you have no idea how buffer overflows work, this is not enough content. Since this was a section I struggled a lot with, my recommendation is to check out Vivek Ramachandran’s x86 Assembly Language and Shellcoding on Linux Course (http://www.pentesteracademy.com/course?id=3. While it might be targeting only Linux, it is still a great way to learn about assembly and how buffer overflows work. 
+I cannot stress enough that the book is not enough to pass the OSCP. The windows buffer overflow is discussed in 20 pages, If you have no idea how buffer overflows work, this is not enough content. Since this was a section I struggled a lot with, my recommendation is to check out Vivek Ramachandran’s [x86 Assembly Language and Shellcoding on Linux Course](http://www.pentesteracademy.com/course?id=3). While it might be targeting only Linux, it is still a great way to learn about assembly and how buffer overflows work. 
 
 The videos were very similar to the content in the book. Before taking the exam the first time, I did not watch the videos. During preparation for my second attempt, I did go through all of the videos and it was a great refresher. I played all the videos using VLC and sped up the playback. I appreciate Muts being slow and thorough, but some videos just took too long. 
 
@@ -50,7 +50,7 @@ The videos were very similar to the content in the book. Before taking the exam 
 
 #In-person PWK Course and Exercises
 
-As mentioned above, the in-person course is not required but I did have the opportunity to attend a live course at black hat and it was well worth it. My instructor was Jim O'Gorman (https://twitter.com/_elwood_) and he was amazing! The class was very entertaining. In the beginning, the course started out a bit slow but perfect for people who have never done any kind of penetration testing. After the first day and a half, the pace started to pick up. 
+As mentioned above, the in-person course is not required but I did have the opportunity to attend a live course at black hat and it was well worth it. My instructor was [Jim O'Gorman](https://twitter.com/_elwood_) and he was amazing! The class was very entertaining. In the beginning, the course started out a bit slow but perfect for people who have never done any kind of penetration testing. After the first day and a half, the pace started to pick up. 
 
 During the entire course, there are OffSec guys walking around and helping out. They encourage asking questions and getting involved in the class. While Offensive Security’s moto is “Try Harder,” I was pleasantly surprised with the amount of assistance that was provided when someone needed help. When asking for help, I never got that “douchey” vibe you might get in some trainings (you defiantly don’t get your hand held through the entire process either). 
 
