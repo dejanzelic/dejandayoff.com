@@ -100,7 +100,7 @@ Overall, the exam was very difficult and a lot of fun. I have a lot of respect t
 
 [Basic Linux Privilege Escalation](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 
-[OSCP Exam Guide](OSCP Certification Exam Guide)
+[OSCP Exam Guide](https://support.offensive-security.com/#!oscp-exam-guide.md)
 
 [How to Pull an Effective All-Nighter](http://lifehacker.com/how-to-pull-an-effective-all-nighter-1569813126)
 
