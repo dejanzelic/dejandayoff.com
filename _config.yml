@@ -15,7 +15,7 @@ disqus_username: dejanzelic
 disqus_sitename: dejandayoff
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
 

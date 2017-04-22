@@ -14,7 +14,7 @@ Natas 16 looks similar to the earlier challenges where we were got to search for
 
 Lets open up the source and see what the difference is:
 
-{% highlight html %}
+```html
 <html>
 <head>
 <!-- This stuff in the header has nothing to do with the level -->
@@ -57,7 +57,7 @@ if($key != "") {
 </div>
 </body>
 </html>
-{% endhighlight %}
+```
 
 Here is the regular expression that filters out the words:
 
@@ -69,9 +69,9 @@ Basically any of the following characters are now disallowed: ; | & ' \ ' "
 
 So any of our previous strings will not work. I remembered that you can execute commands within a string in bash by adding a: $(<<COMMANDHERE>>). My idea was to run the following code:
 
-{% highlight bash %}
+```bash
 $(grep ^A /etc/natas_webpass/natas17)
-{% endhighlight %}
+```
 
 If we run that and the first character is "A" the entire password will be returned. If "A" does not exist, an empty string will be returned. However, this won't work because even if we guess the correct letter grep will return the password and search for the password in the dictionary which does not exist. If we find a word that exists in the dictionary, we would be able to utilize the fact that grep returns an empty string when the letter is not found. Lets first find a word we can use, I just searched for the letter "a":
 
@@ -79,9 +79,9 @@ If we run that and the first character is "A" the entire password will be return
 
 I'll use the word "African" and that would mean our query string will look something like:
 
-{% highlight bash %}
+```bash
 $(grep ^A /etc/natas_webpass/natas17)African
-{% endhighlight %}
+```
 
 Next I'll use the Burp Intruder to see if we can get just the first letter:
 
@@ -89,7 +89,7 @@ Next I'll use the Burp Intruder to see if we can get just the first letter:
 
 Looks like we got a hit! Now lets use a script. I'll copy most of it from the last challenge:
 
-{% highlight python %}
+```python
 import urllib
 import urllib2
 import pprint
@@ -126,7 +126,7 @@ for i in range(1, 33):
             password+=Chars[j]
             print password
             break
-{% endhighlight %}
+```
 
 After that's done we get the following output:
 
