@@ -4,8 +4,8 @@ title: "4 Ways to Transfer Files With a Limited Shell"
 date: 2017-04-22 08:42:48
 image: '/assets/img/'
 description: How I transfer files to a windows 
-tags: oscp
-categories: OSCP HowTo
+tags: oscp HowTo
+categories: OSCP
 twitter_text: Transfering Files With a Limited Shell
 ---
 
