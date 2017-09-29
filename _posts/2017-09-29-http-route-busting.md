@@ -8,6 +8,8 @@ tags: presentation
 categories: presentation
 twitter_text:
 ---
+I did a talk at CactusCon 2017 about HTTP Route Busting.
+
 Here is the slides if you would like a copy:
 [HTTP Route Busting](/assets/files/HTTP-Route-Busting.pdf)
 
