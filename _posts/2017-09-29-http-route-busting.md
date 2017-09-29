@@ -21,7 +21,7 @@ Apparently there were more questions that just didn’t load so I will get to th
 
 #### Are you concerned about verbs besides GET causing unwanted changes?
 
-* Even GET can cause unwanted changes. That is always a risk when doing a blackbox test. If an application allows you to make changes without authentication, that might be a issues itself.
+* Even GET can cause unwanted changes. That is always a risk when doing a blackbox test. If an application allows you to make changes without authentication, that might be a issue itself.
 
 #### What tool do you use for setting markers in code?
 
