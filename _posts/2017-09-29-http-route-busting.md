@@ -29,5 +29,5 @@ Apparently there were more questions that just didn’t load so I will get to th
 
 #### What are the most popular web frameworks used today?  Are there any new frameworks that you have started working for?
 
-* For APIs I think Swagger is the most popular. I have seen a lot of Express for node as well. It really depends on the language. Java Spring is also very popular.
+* It really depends onf the language. I have seen a lot of Express for Node, Java Spring is also popular, and Slim for php. Swagger is really popular for documentation as well. 
 
