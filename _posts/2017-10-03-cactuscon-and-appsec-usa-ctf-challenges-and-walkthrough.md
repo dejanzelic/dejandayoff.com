@@ -27,7 +27,7 @@ Virtualbox - [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.
 ## Chitty Chat
 
 ```bash
-git clone git@github.com:dejanzelic/chittychat.git
+git clone https://github.com/dejanzelic/chittychat.git
 cd chittychat
 vagrant up 
 ```
@@ -37,7 +37,7 @@ Visit the page at: [http://127.0.0.1:1234/](http://127.0.0.1:1234/)
 ## Business Casual
 
 ```bash
-git clone git@github.com:dejanzelic/business-casual.git
+git clone https://github.com/dejanzelic/business-casual.git 
 cd business-casual/
 vagrant up 
 sudo echo '127.0.0.1 business-casual.mysterious-hashes.net' >> /etc/hosts
