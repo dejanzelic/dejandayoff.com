@@ -5,7 +5,7 @@ date: 2017-09-29 11:33:05
 image: '/assets/img/'
 description: "Enumerating Routes Instead of Directories"
 tags: presentation
-categories: presentation
+categories: Presentation Research
 twitter_text:
 ---
 I did a talk at CactusCon 2017 about HTTP Route Busting.

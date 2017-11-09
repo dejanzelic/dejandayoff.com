@@ -4,8 +4,8 @@ title: "How To Bypass AWS Security Group Rules and Reach the Internet"
 date: 2017-11-09 17:05:00
 image: '/assets/img/aws_dns/'
 description: Traffic destined to the AmazonProvidedDNS is traffic bound for AWS management infrastructure and does not egress via the same network links as standard customer traffic and is not evaluated by Security Groups.
-tags: aws, DNS
-categories:
+tags: aws DNS
+categories: Research
 twitter_text: Bypassing AWS Security Group Rules and Reaching the Internet
 ---
 
@@ -172,8 +172,7 @@ ssh -L 8080:google.com:443 10.53.53.2
 ```
 
 (10.53.53.0/24 is the subnet of the iodine tunnel, 10.53.53.2 is the
-iodine server that I can ssh to\
-)
+iodine server that I can ssh to)
 
 Doing a curl on https://127.0.0.1:8080 allows us to hit google's
 server!!

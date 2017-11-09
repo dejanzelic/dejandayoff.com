@@ -4,8 +4,8 @@ title: "CactusCon and AppSec USA CTF Challenges and Walkthrough"
 date: 2017-10-03 14:33:02
 image: '/assets/img/'
 description: Walkthrough for ChittyChat and Business Casual
-tags: CTF, CactusCon, AppSecUSA
-categories: CTF, CactusCon, AppSecUSA
+tags: CTF CactusCon AppSecUSA
+categories: CTF CactusCon
 twitter_text:
 ---
 

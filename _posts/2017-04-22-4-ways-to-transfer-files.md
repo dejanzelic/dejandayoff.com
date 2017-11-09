@@ -5,7 +5,7 @@ date: 2017-04-22 08:42:48
 image: '/assets/img/'
 description: How I transfer files to a windows host with limited shell
 tags: oscp HowTo
-categories: OSCP
+categories: OSCP Research
 twitter_text: Transfering Files With a Limited Shell
 ---
 
