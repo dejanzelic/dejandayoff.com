@@ -183,7 +183,7 @@ server!!
 While in the image google responds with a redirect, the purpose of the
 demonstration was to show that a server with no outbound rules and no
 internet gateway was able to reach external sites. From here, an
-attacker could freely transfer data from an "airgapped" system with no
+attacker could freely transfer data from an isolated system with no
 detection.
 
 Mitigation
