@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "How To Bypass AWS Security Group Rules and Reach the Internet"
-date: 2017-11-09 17:05:00
+title: "Using DNS to Break Out of Isolated Networks in a AWS Cloud Environment"
+date: 2017-11-27 17:05:00
 image: '/assets/img/aws_dns/'
 description: Traffic destined to the AmazonProvidedDNS is traffic bound for AWS management infrastructure and does not egress via the same network links as standard customer traffic and is not evaluated by Security Groups.
 tags: aws DNS
 categories: Research
-twitter_text: Bypassing AWS Security Group Rules and Reaching the Internet
+twitter_text: Using DNS to Break Out of Isolated Networks in a AWS Cloud Environment
 ---
 
 TL;DR
