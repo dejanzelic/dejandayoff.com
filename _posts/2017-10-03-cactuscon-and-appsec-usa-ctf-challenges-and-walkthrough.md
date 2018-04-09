@@ -43,7 +43,7 @@ vagrant up
 sudo echo '127.0.0.1 business-casual.mysterious-hashes.net' >> /etc/hosts
 ```
 
-Visit the page at: [http://business-casual.mysterious-hashes.net:8080/](http://business-casual.mysterious-hashes.net:8080/)
+Visit the page at: [http://business-casual.mysterious-hashes.net:8081/](http://business-casual.mysterious-hashes.net:8080/)
 
 _Note: the domain on this challenge is important and necessary!_
 
