@@ -2,7 +2,6 @@
 layout: post
 title: "OSCP Review - Felt the Pain and Suffered through it"
 date: 2017-04-03 20:30:16
-image: '/assets/img/'
 description: My review of the Offensive Security Certified Professional certification 
 tags: oscp
 categories: OSCP

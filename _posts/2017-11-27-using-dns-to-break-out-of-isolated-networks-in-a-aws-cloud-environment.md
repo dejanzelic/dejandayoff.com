@@ -2,7 +2,6 @@
 layout: post
 title: "Using DNS to Break Out of Isolated Networks in a AWS Cloud Environment"
 date: 2017-11-27 17:05:00
-image: '/assets/img/aws_dns/'
 description: Traffic destined to the AmazonProvidedDNS is traffic bound for AWS management infrastructure and does not egress via the same network links as standard customer traffic and is not evaluated by Security Groups.
 tags: aws DNS
 categories: Research

@@ -2,7 +2,6 @@
 layout: post
 title: "Natas Level14 - Level15"
 date: 2015-10-02 21:06:37
-image: '/assets/img/'
 description:
 tags: Natas CTF
 categories: Natas

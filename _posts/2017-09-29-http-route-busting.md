@@ -2,7 +2,6 @@
 layout: post
 title: "HTTP Route Busting"
 date: 2017-09-29 11:33:05
-image: '/assets/img/'
 description: "Enumerating Routes Instead of Directories"
 tags: presentation
 categories: Presentation Research

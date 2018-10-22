@@ -2,7 +2,6 @@
 layout: post
 title: "Natas Level1 - Level2"
 date: 2015-09-24 22:25:48
-image: '/assets/img/'
 description:
 tags: Natas CTF
 categories: Natas

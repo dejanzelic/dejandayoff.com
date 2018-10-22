@@ -2,7 +2,6 @@
 layout: post
 title: "CMD+CTRL CTF at DEF CON 24 Review"
 date: 2016-08-13 17:07:23
-image: '/assets/img/'
 description:
 tags: DEFCON CTF
 categories: DEFCON CTF

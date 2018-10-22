@@ -2,7 +2,6 @@
 layout: post
 title: "YoBlog CactusCon CTF Walkthrough"
 date: 2016-05-16 16:37:41
-image: '/assets/img/'
 description: CactusCon's Root-The-Box Writeup
 tags: CactusCon CTF Root-The-Box
 categories: CactusCon CTF
