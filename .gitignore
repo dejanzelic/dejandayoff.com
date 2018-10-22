@@ -3,3 +3,4 @@ _site
 node_modules
 _drafts
 .idea
+.DS_Store
