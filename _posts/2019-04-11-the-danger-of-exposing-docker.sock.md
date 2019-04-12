@@ -275,3 +275,5 @@ sudo curl -i -s --unix-socket /var/run/docker.sock -X POST \
 --data-binary '{"Detach": false,"Tty": false}' \
 http://localhost/exec/<exec_id>/start
 ```
+
+Sock Icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
